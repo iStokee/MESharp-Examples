@@ -1,0 +1,12 @@
+C:\Development\MemoryError\MESharp_Examples\MESharpCLI\bin\Debug\net8.0-windows\MESharpCLI.deps.json
+C:\Development\MemoryError\MESharp_Examples\MESharpCLI\bin\Debug\net8.0-windows\MESharpCLI.dll
+C:\Development\MemoryError\MESharp_Examples\MESharpCLI\bin\Debug\net8.0-windows\MESharpCLI.pdb
+C:\Development\MemoryError\MESharp_Examples\MESharpCLI\obj\Debug\net8.0-windows\MESharpCLI.csproj.AssemblyReference.cache
+C:\Development\MemoryError\MESharp_Examples\MESharpCLI\obj\Debug\net8.0-windows\MESharpCLI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Development\MemoryError\MESharp_Examples\MESharpCLI\obj\Debug\net8.0-windows\MESharpCLI.AssemblyInfoInputs.cache
+C:\Development\MemoryError\MESharp_Examples\MESharpCLI\obj\Debug\net8.0-windows\MESharpCLI.AssemblyInfo.cs
+C:\Development\MemoryError\MESharp_Examples\MESharpCLI\obj\Debug\net8.0-windows\MESharpCLI.csproj.CoreCompileInputs.cache
+C:\Development\MemoryError\MESharp_Examples\MESharpCLI\obj\Debug\net8.0-windows\MESharpCLI.dll
+C:\Development\MemoryError\MESharp_Examples\MESharpCLI\obj\Debug\net8.0-windows\refint\MESharpCLI.dll
+C:\Development\MemoryError\MESharp_Examples\MESharpCLI\obj\Debug\net8.0-windows\MESharpCLI.pdb
+C:\Development\MemoryError\MESharp_Examples\MESharpCLI\obj\Debug\net8.0-windows\ref\MESharpCLI.dll

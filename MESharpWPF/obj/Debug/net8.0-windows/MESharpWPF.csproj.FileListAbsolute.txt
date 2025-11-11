@@ -1,0 +1,16 @@
+C:\Development\MemoryError\MESharp_Examples\MESharpWPF\bin\Debug\net8.0-windows\MESharpWPF.deps.json
+C:\Development\MemoryError\MESharp_Examples\MESharpWPF\bin\Debug\net8.0-windows\MESharpWPF.dll
+C:\Development\MemoryError\MESharp_Examples\MESharpWPF\bin\Debug\net8.0-windows\MESharpWPF.pdb
+C:\Development\MemoryError\MESharp_Examples\MESharpWPF\obj\Debug\net8.0-windows\MESharpWPF.csproj.AssemblyReference.cache
+C:\Development\MemoryError\MESharp_Examples\MESharpWPF\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Development\MemoryError\MESharp_Examples\MESharpWPF\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Development\MemoryError\MESharp_Examples\MESharpWPF\obj\Debug\net8.0-windows\MESharpWPF_MarkupCompile.cache
+C:\Development\MemoryError\MESharp_Examples\MESharpWPF\obj\Debug\net8.0-windows\MESharpWPF.g.resources
+C:\Development\MemoryError\MESharp_Examples\MESharpWPF\obj\Debug\net8.0-windows\MESharpWPF.GeneratedMSBuildEditorConfig.editorconfig
+C:\Development\MemoryError\MESharp_Examples\MESharpWPF\obj\Debug\net8.0-windows\MESharpWPF.AssemblyInfoInputs.cache
+C:\Development\MemoryError\MESharp_Examples\MESharpWPF\obj\Debug\net8.0-windows\MESharpWPF.AssemblyInfo.cs
+C:\Development\MemoryError\MESharp_Examples\MESharpWPF\obj\Debug\net8.0-windows\MESharpWPF.csproj.CoreCompileInputs.cache
+C:\Development\MemoryError\MESharp_Examples\MESharpWPF\obj\Debug\net8.0-windows\MESharpWPF.dll
+C:\Development\MemoryError\MESharp_Examples\MESharpWPF\obj\Debug\net8.0-windows\refint\MESharpWPF.dll
+C:\Development\MemoryError\MESharp_Examples\MESharpWPF\obj\Debug\net8.0-windows\MESharpWPF.pdb
+C:\Development\MemoryError\MESharp_Examples\MESharpWPF\obj\Debug\net8.0-windows\ref\MESharpWPF.dll

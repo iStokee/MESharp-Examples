@@ -1,0 +1,17 @@
+C:\Development\MemoryError\MESharp_Examples\MESharpWinForm\obj\Debug\net8.0-windows\MESharpWinForm.csproj.AssemblyReference.cache
+C:\Development\MemoryError\MESharp_Examples\MESharpWinForm\obj\Debug\net8.0-windows\MESharpExamples.WinForms.Form1.resources
+C:\Development\MemoryError\MESharp_Examples\MESharpWinForm\obj\Debug\net8.0-windows\MESharpWinForm.csproj.GenerateResource.cache
+C:\Development\MemoryError\MESharp_Examples\MESharpWinForm\obj\Debug\net8.0-windows\MESharpWinForm.GeneratedMSBuildEditorConfig.editorconfig
+C:\Development\MemoryError\MESharp_Examples\MESharpWinForm\obj\Debug\net8.0-windows\MESharpWinForm.AssemblyInfoInputs.cache
+C:\Development\MemoryError\MESharp_Examples\MESharpWinForm\obj\Debug\net8.0-windows\MESharpWinForm.AssemblyInfo.cs
+C:\Development\MemoryError\MESharp_Examples\MESharpWinForm\obj\Debug\net8.0-windows\MESharpWinForm.csproj.CoreCompileInputs.cache
+C:\Development\MemoryError\MESharp_Examples\MESharpWinForm\bin\Debug\net8.0-windows\MESharpWinForm.exe
+C:\Development\MemoryError\MESharp_Examples\MESharpWinForm\bin\Debug\net8.0-windows\MESharpWinForm.deps.json
+C:\Development\MemoryError\MESharp_Examples\MESharpWinForm\bin\Debug\net8.0-windows\MESharpWinForm.runtimeconfig.json
+C:\Development\MemoryError\MESharp_Examples\MESharpWinForm\bin\Debug\net8.0-windows\MESharpWinForm.dll
+C:\Development\MemoryError\MESharp_Examples\MESharpWinForm\bin\Debug\net8.0-windows\MESharpWinForm.pdb
+C:\Development\MemoryError\MESharp_Examples\MESharpWinForm\obj\Debug\net8.0-windows\MESharpWinForm.dll
+C:\Development\MemoryError\MESharp_Examples\MESharpWinForm\obj\Debug\net8.0-windows\refint\MESharpWinForm.dll
+C:\Development\MemoryError\MESharp_Examples\MESharpWinForm\obj\Debug\net8.0-windows\MESharpWinForm.pdb
+C:\Development\MemoryError\MESharp_Examples\MESharpWinForm\obj\Debug\net8.0-windows\MESharpWinForm.genruntimeconfig.cache
+C:\Development\MemoryError\MESharp_Examples\MESharpWinForm\obj\Debug\net8.0-windows\ref\MESharpWinForm.dll

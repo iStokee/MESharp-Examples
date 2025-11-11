@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <LangVersion>latest</LangVersion>
+    <OutputType>Library</OutputType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="csharp_interop">
+      <HintPath>..\..\C#\csharp_interop\bin\Debug\net8.0-windows\csharp_interop.dll</HintPath>
+      <Private>false</Private>
+      <EmbedInteropTypes>false</EmbedInteropTypes>
+    </Reference>
+  </ItemGroup>
+
+  <Target Name="CopyScriptToExamplesFolder" AfterTargets="Build">
+    <PropertyGroup>
+      <ExamplesPath>$(USERPROFILE)\MemoryError\MESharpExamples\WPF\</ExamplesPath>
+    </PropertyGroup>
+    <MakeDir Directories="$(ExamplesPath)" Condition="!Exists('$(ExamplesPath)')" />
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(ExamplesPath)" SkipUnchangedFiles="true" />
+    <Message Importance="High" Text="[MESharpExamples.WPF] Copied $(TargetFileName) to $(ExamplesPath)" />
+  </Target>
+
+</Project>
