@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 using MESharp.API;
 using MESharp.Services;
 
-namespace MESharpExamples.CLI
+namespace MESharp
 {
     /// <summary>
     /// Minimal CLI sample that relies on <see cref="ScriptRuntimeHost"/> to manage MESharp entry points.

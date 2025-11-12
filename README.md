@@ -9,6 +9,7 @@ This folder contains self-contained script projects that reference `csharp_inter
 | `MESharpCLI/` | `net8.0` console | Minimal loop that writes to the native logger and shows `ShutdownMonitor` usage. |
 | `MESharpWinForm/` | `net8.0-windows` WinForms | Demonstrates UI message loop + `ApplicationConfiguration` bootstrapping. |
 | `MESharpWPF/` | `net8.0-windows` WPF | Mirrors the pattern Orbit uses for script UIs, including dispatcher shutdown. |
+| `MESharpPortables/` | `net8.0-windows` WPF | Modernized take on the classic Stokee Portables helper with MESharp APIs. |
 | `MESharpExamples.sln` | Solution for all samples | Load this in Visual Studio to build/debug each project. |
 
 ## Prerequisites

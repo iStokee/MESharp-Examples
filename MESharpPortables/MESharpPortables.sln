@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36518.9 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MESharpPortables", "MESharpPortables.csproj", "{CF193C44-2F42-43E3-A4E5-32EA562E807D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CF193C44-2F42-43E3-A4E5-32EA562E807D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF193C44-2F42-43E3-A4E5-32EA562E807D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF193C44-2F42-43E3-A4E5-32EA562E807D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF193C44-2F42-43E3-A4E5-32EA562E807D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3DAE5F5A-E09D-4582-9D8F-C04D54898F7B}
+	EndGlobalSection
+EndGlobal

@@ -1,8 +1,9 @@
 using System;
 using System.Runtime.InteropServices;
 using MESharp.Services;
+using MESharpExamples.WinForms;
 
-namespace MESharpExamples.WinForms
+namespace MESharp
 {
     /// <summary>
     /// Thin wrapper that delegtes all MESharp entry points to <see cref="WinFormsScriptHost"/>.

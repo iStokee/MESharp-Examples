@@ -1,18 +1,18 @@
 using System;
 using System.Runtime.InteropServices;
 using MESharp.Services;
-using MESharpExamples.WPF;
+using MESharpExamples.Portables;
 
 namespace MESharp
 {
     /// <summary>
-    /// Delegates all MESharp entry points to the shared <see cref="WpfScriptHost"/>.
+    /// Entry point for the MESharp Portables sample.
     /// </summary>
     public static class ScriptEntry
     {
         private static readonly UiScriptHostOptions UiOptions = new()
         {
-            ScriptName = "MESharp WPF Example"
+            ScriptName = "MESharp Portables"
         };
 
         public static void Initialize() => WpfScriptHost.Run(() => new MainWindow(), UiOptions);

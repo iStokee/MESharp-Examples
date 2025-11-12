@@ -27,4 +27,16 @@
     <Message Importance="High" Text="[MESharpExamples.WinForms] Copied $(TargetFileName) to $(ExamplesPath)" />
   </Target>
 
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="
+      :: ensure the target folder exists
+      if not exist &quot;%USERPROFILE%\MemoryError\CSharp_scripts\&quot; (
+        mkdir &quot;%USERPROFILE%\MemoryError\CSharp_scripts\&quot;
+      )
+
+      :: copy the freshly built DLL
+      xcopy /Y /I &quot;$(TargetPath)&quot; &quot;%USERPROFILE%\MemoryError\CSharp_scripts\&quot;
+    " />
+  </Target>
+
 </Project>

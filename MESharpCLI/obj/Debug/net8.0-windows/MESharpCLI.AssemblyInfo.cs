@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MESharpCLI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+af1c623d1cdc5282adcdb32594caeb6c2de6fbcf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e0c767b892f7438d4947ab20ae8fba5480a6e1b9")]
 [assembly: System.Reflection.AssemblyProductAttribute("MESharpCLI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MESharpCLI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -20,11 +20,11 @@
 
   <Target Name="CopyScriptToExamplesFolder" AfterTargets="Build">
     <PropertyGroup>
-      <ExamplesPath>$(USERPROFILE)\MemoryError\MESharpExamples\WPF\</ExamplesPath>
+      <ExamplesPath>$(USERPROFILE)\MemoryError\MESharpExamples\Portables\</ExamplesPath>
     </PropertyGroup>
     <MakeDir Directories="$(ExamplesPath)" Condition="!Exists('$(ExamplesPath)')" />
     <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(ExamplesPath)" SkipUnchangedFiles="true" />
-    <Message Importance="High" Text="[MESharpExamples.WPF] Copied $(TargetFileName) to $(ExamplesPath)" />
+    <Message Importance="High" Text="[MESharpExamples.Portables] Copied $(TargetFileName) to $(ExamplesPath)" />
   </Target>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
