@@ -14,3 +14,24 @@ C:\Development\MemoryError\MESharp_Examples\MESharpWPF\obj\Debug\net8.0-windows\
 C:\Development\MemoryError\MESharp_Examples\MESharpWPF\obj\Debug\net8.0-windows\refint\MESharpWPF.dll
 C:\Development\MemoryError\MESharp_Examples\MESharpWPF\obj\Debug\net8.0-windows\MESharpWPF.pdb
 C:\Development\MemoryError\MESharp_Examples\MESharpWPF\obj\Debug\net8.0-windows\ref\MESharpWPF.dll
+C:\Users\Max Power\source\repos\iStokee\MESharp-Examples\MESharpWPF\bin\Debug\net8.0-windows\MESharpWPF.deps.json
+C:\Users\Max Power\source\repos\iStokee\MESharp-Examples\MESharpWPF\bin\Debug\net8.0-windows\MESharpWPF.dll
+C:\Users\Max Power\source\repos\iStokee\MESharp-Examples\MESharpWPF\bin\Debug\net8.0-windows\MESharpWPF.pdb
+C:\Users\Max Power\source\repos\iStokee\MESharp-Examples\MESharpWPF\bin\Debug\net8.0-windows\csharp_interop.dll
+C:\Users\Max Power\source\repos\iStokee\MESharp-Examples\MESharpWPF\bin\Debug\net8.0-windows\csharp_interop.pdb
+C:\Users\Max Power\source\repos\iStokee\MESharp-Examples\MESharpWPF\bin\Debug\net8.0-windows\csharp_interop.xml
+C:\Users\Max Power\source\repos\iStokee\MESharp-Examples\MESharpWPF\obj\Debug\net8.0-windows\MESharpWPF.csproj.AssemblyReference.cache
+C:\Users\Max Power\source\repos\iStokee\MESharp-Examples\MESharpWPF\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\Max Power\source\repos\iStokee\MESharp-Examples\MESharpWPF\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\Max Power\source\repos\iStokee\MESharp-Examples\MESharpWPF\obj\Debug\net8.0-windows\MESharpWPF_MarkupCompile.cache
+C:\Users\Max Power\source\repos\iStokee\MESharp-Examples\MESharpWPF\obj\Debug\net8.0-windows\MESharpWPF.g.resources
+C:\Users\Max Power\source\repos\iStokee\MESharp-Examples\MESharpWPF\obj\Debug\net8.0-windows\MESharpWPF.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Max Power\source\repos\iStokee\MESharp-Examples\MESharpWPF\obj\Debug\net8.0-windows\MESharpWPF.AssemblyInfoInputs.cache
+C:\Users\Max Power\source\repos\iStokee\MESharp-Examples\MESharpWPF\obj\Debug\net8.0-windows\MESharpWPF.AssemblyInfo.cs
+C:\Users\Max Power\source\repos\iStokee\MESharp-Examples\MESharpWPF\obj\Debug\net8.0-windows\MESharpWPF.csproj.CoreCompileInputs.cache
+C:\Users\Max Power\source\repos\iStokee\MESharp-Examples\MESharpWPF\obj\Debug\net8.0-windows\MESharpWPF.sourcelink.json
+C:\Users\Max Power\source\repos\iStokee\MESharp-Examples\MESharpWPF\obj\Debug\net8.0-windows\MESharpWPF.csproj.Up2Date
+C:\Users\Max Power\source\repos\iStokee\MESharp-Examples\MESharpWPF\obj\Debug\net8.0-windows\MESharpWPF.dll
+C:\Users\Max Power\source\repos\iStokee\MESharp-Examples\MESharpWPF\obj\Debug\net8.0-windows\refint\MESharpWPF.dll
+C:\Users\Max Power\source\repos\iStokee\MESharp-Examples\MESharpWPF\obj\Debug\net8.0-windows\MESharpWPF.pdb
+C:\Users\Max Power\source\repos\iStokee\MESharp-Examples\MESharpWPF\obj\Debug\net8.0-windows\ref\MESharpWPF.dll

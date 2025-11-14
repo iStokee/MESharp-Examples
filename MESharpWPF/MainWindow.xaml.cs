@@ -47,6 +47,7 @@ namespace MESharpExamples.WPF
 
         private void OnStatusTick(object? sender, EventArgs e) => RefreshStatus();
 
+
         private void RefreshStatus()
         {
             if (!Game.IsInjected || !Game.HasClientPointers)

@@ -10,3 +10,20 @@ C:\Development\MemoryError\MESharp_Examples\MESharpCLI\obj\Debug\net8.0-windows\
 C:\Development\MemoryError\MESharp_Examples\MESharpCLI\obj\Debug\net8.0-windows\refint\MESharpCLI.dll
 C:\Development\MemoryError\MESharp_Examples\MESharpCLI\obj\Debug\net8.0-windows\MESharpCLI.pdb
 C:\Development\MemoryError\MESharp_Examples\MESharpCLI\obj\Debug\net8.0-windows\ref\MESharpCLI.dll
+C:\Users\Max Power\source\repos\iStokee\MESharp-Examples\MESharpCLI\bin\Debug\net8.0-windows\MESharpCLI.deps.json
+C:\Users\Max Power\source\repos\iStokee\MESharp-Examples\MESharpCLI\bin\Debug\net8.0-windows\MESharpCLI.dll
+C:\Users\Max Power\source\repos\iStokee\MESharp-Examples\MESharpCLI\bin\Debug\net8.0-windows\MESharpCLI.pdb
+C:\Users\Max Power\source\repos\iStokee\MESharp-Examples\MESharpCLI\bin\Debug\net8.0-windows\csharp_interop.dll
+C:\Users\Max Power\source\repos\iStokee\MESharp-Examples\MESharpCLI\bin\Debug\net8.0-windows\csharp_interop.pdb
+C:\Users\Max Power\source\repos\iStokee\MESharp-Examples\MESharpCLI\bin\Debug\net8.0-windows\csharp_interop.xml
+C:\Users\Max Power\source\repos\iStokee\MESharp-Examples\MESharpCLI\obj\Debug\net8.0-windows\MESharpCLI.csproj.AssemblyReference.cache
+C:\Users\Max Power\source\repos\iStokee\MESharp-Examples\MESharpCLI\obj\Debug\net8.0-windows\MESharpCLI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Max Power\source\repos\iStokee\MESharp-Examples\MESharpCLI\obj\Debug\net8.0-windows\MESharpCLI.AssemblyInfoInputs.cache
+C:\Users\Max Power\source\repos\iStokee\MESharp-Examples\MESharpCLI\obj\Debug\net8.0-windows\MESharpCLI.AssemblyInfo.cs
+C:\Users\Max Power\source\repos\iStokee\MESharp-Examples\MESharpCLI\obj\Debug\net8.0-windows\MESharpCLI.csproj.CoreCompileInputs.cache
+C:\Users\Max Power\source\repos\iStokee\MESharp-Examples\MESharpCLI\obj\Debug\net8.0-windows\MESharpCLI.sourcelink.json
+C:\Users\Max Power\source\repos\iStokee\MESharp-Examples\MESharpCLI\obj\Debug\net8.0-windows\MESharpCLI.csproj.Up2Date
+C:\Users\Max Power\source\repos\iStokee\MESharp-Examples\MESharpCLI\obj\Debug\net8.0-windows\MESharpCLI.dll
+C:\Users\Max Power\source\repos\iStokee\MESharp-Examples\MESharpCLI\obj\Debug\net8.0-windows\refint\MESharpCLI.dll
+C:\Users\Max Power\source\repos\iStokee\MESharp-Examples\MESharpCLI\obj\Debug\net8.0-windows\MESharpCLI.pdb
+C:\Users\Max Power\source\repos\iStokee\MESharp-Examples\MESharpCLI\obj\Debug\net8.0-windows\ref\MESharpCLI.dll

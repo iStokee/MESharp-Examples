@@ -1,5 +1,4 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFramework>net8.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
@@ -8,16 +7,9 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <LangVersion>latest</LangVersion>
     <OutputType>Library</OutputType>
+    <UseWindowsForms>True</UseWindowsForms>
+    <PlatformTarget>x64</PlatformTarget>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Reference Include="csharp_interop">
-      <HintPath>..\..\C#\csharp_interop\bin\Debug\net8.0-windows\csharp_interop.dll</HintPath>
-      <Private>false</Private>
-      <EmbedInteropTypes>false</EmbedInteropTypes>
-    </Reference>
-  </ItemGroup>
-
   <Target Name="CopyScriptToExamplesFolder" AfterTargets="Build">
     <PropertyGroup>
       <ExamplesPath>$(USERPROFILE)\MemoryError\MESharpExamples\Portables\</ExamplesPath>
@@ -26,17 +18,15 @@
     <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(ExamplesPath)" SkipUnchangedFiles="true" />
     <Message Importance="High" Text="[MESharpExamples.Portables] Copied $(TargetFileName) to $(ExamplesPath)" />
   </Target>
-
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="
-      :: ensure the target folder exists
-      if not exist &quot;%USERPROFILE%\MemoryError\CSharp_scripts\&quot; (
-        mkdir &quot;%USERPROFILE%\MemoryError\CSharp_scripts\&quot;
-      )
-
-      :: copy the freshly built DLL
-      xcopy /Y /I &quot;$(TargetPath)&quot; &quot;%USERPROFILE%\MemoryError\CSharp_scripts\&quot;
-    " />
+    <Exec Command="&#xD;&#xA;      :: ensure the target folder exists&#xD;&#xA;      if not exist &quot;%USERPROFILE%\MemoryError\CSharp_scripts\&quot; (&#xD;&#xA;        mkdir &quot;%USERPROFILE%\MemoryError\CSharp_scripts\&quot;&#xD;&#xA;      )&#xD;&#xA;&#xD;&#xA;      :: copy the freshly built DLL&#xD;&#xA;      xcopy /Y /I &quot;$(TargetPath)&quot; &quot;%USERPROFILE%\MemoryError\CSharp_scripts\&quot;&#xD;&#xA;    " />
   </Target>
-
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\Max Power\source\repos\csharp_interop\csharp_interop.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="csharp_interop">
+      <HintPath>..\..\..\..\..\Desktop\Build_DLL\csharp_interop.dll</HintPath>
+    </Reference>
+  </ItemGroup>
 </Project>
