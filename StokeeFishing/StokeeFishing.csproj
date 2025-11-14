@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="csharp_interop">
+      <HintPath>..\..\..\..\..\Desktop\Build_DLL\csharp_interop.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

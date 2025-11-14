@@ -4,18 +4,20 @@
         Title="MESharp Portables"
         Height="520"
         Width="940"
+        Background="White"
         WindowStartupLocation="CenterScreen">
     <Grid Margin="16">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="2.2*" />
-            <ColumnDefinition Width="2.8*" />
+            <ColumnDefinition Width="268*" />
+            <ColumnDefinition Width="131*"/>
+            <ColumnDefinition Width="508*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <StackPanel Grid.ColumnSpan="2" Orientation="Vertical" Margin="0,0,0,16">
+        <StackPanel Grid.ColumnSpan="3" Orientation="Vertical" Margin="0,0,0,48">
             <TextBlock Text="Portable Stations"
                        FontSize="24"
                        FontWeight="Bold" />
@@ -25,7 +27,7 @@ Choose a station, configuration, and bank preset, then start the automation loop
                        Foreground="Gray" />
         </StackPanel>
 
-        <StackPanel Grid.Row="1" Grid.Column="0" Margin="0,0,16,0">
+        <StackPanel Grid.Column="0" Margin="0,64,16,0" Grid.ColumnSpan="2" Grid.RowSpan="2">
             <GroupBox Header="Setup" Margin="0,0,0,16">
                 <StackPanel Margin="12">
                     <TextBlock Text="Portable Station" FontWeight="SemiBold" />
@@ -105,7 +107,7 @@ Choose a station, configuration, and bank preset, then start the automation loop
             </GroupBox>
         </StackPanel>
 
-        <Grid Grid.Row="1" Grid.Column="1">
+        <Grid Grid.Column="2" Margin="0,64,0,0" Grid.RowSpan="2">
             <Grid.RowDefinitions>
                 <RowDefinition Height="2*" />
                 <RowDefinition Height="*" />
@@ -119,7 +121,7 @@ Choose a station, configuration, and bank preset, then start the automation loop
             <GroupBox Header="Quick Reference" Grid.Row="1">
                 <TextBlock Margin="8"
                            TextWrapping="Wrap"
-                           Text="This script mirrors the original Stokee Portables flow but targets the modern MESharp API. Use it as a starting point for real automation: swap the simulated steps in PortablesRunner with actual Inventory, Objects, and Npcs actions." />
+                           Text=" Use this as a starting point for real automation: swap the simulated steps in PortablesRunner with actual Inventory, Objects, and Npcs actions." />
             </GroupBox>
         </Grid>
     </Grid>
