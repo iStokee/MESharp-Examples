@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "StokeeFishing/1.0.0": {
+        "dependencies": {
+          "csharp_interop": "1.0.0.0"
+        },
+        "runtime": {
+          "StokeeFishing.dll": {}
+        }
+      },
+      "csharp_interop/1.0.0.0": {
+        "runtime": {
+          "csharp_interop.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "StokeeFishing/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "csharp_interop/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

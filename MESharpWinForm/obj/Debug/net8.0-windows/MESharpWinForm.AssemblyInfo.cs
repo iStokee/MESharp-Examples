@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MESharpWinForm")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+af1c623d1cdc5282adcdb32594caeb6c2de6fbcf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e895c592a1efd589c35f3491ce56c07d196d8845")]
 [assembly: System.Reflection.AssemblyProductAttribute("MESharpWinForm")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MESharpWinForm")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

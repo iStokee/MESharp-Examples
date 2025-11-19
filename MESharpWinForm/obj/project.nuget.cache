@@ -1,8 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "CQUGKqX4reU=",
+  "dgSpecHash": "aH33bOWoHog=",
   "success": true,
   "projectFilePath": "C:\\Development\\MemoryError\\MESharp-Examples\\MESharpWinForm\\MESharpWinForm.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\istokee\\.nuget\\packages\\controlzex\\4.4.0\\controlzex.4.4.0.nupkg.sha512",
+    "C:\\Users\\istokee\\.nuget\\packages\\mahapps.metro\\2.4.11\\mahapps.metro.2.4.11.nupkg.sha512",
+    "C:\\Users\\istokee\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\8.0.0\\microsoft.extensions.dependencyinjection.8.0.0.nupkg.sha512",
+    "C:\\Users\\istokee\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\istokee\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.19\\microsoft.xaml.behaviors.wpf.1.1.19.nupkg.sha512",
+    "C:\\Users\\istokee\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512"
+  ],
   "logs": []
 }

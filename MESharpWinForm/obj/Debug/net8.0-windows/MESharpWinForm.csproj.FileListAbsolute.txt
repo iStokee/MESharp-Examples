@@ -15,3 +15,22 @@ C:\Development\MemoryError\MESharp_Examples\MESharpWinForm\obj\Debug\net8.0-wind
 C:\Development\MemoryError\MESharp_Examples\MESharpWinForm\obj\Debug\net8.0-windows\MESharpWinForm.pdb
 C:\Development\MemoryError\MESharp_Examples\MESharpWinForm\obj\Debug\net8.0-windows\MESharpWinForm.genruntimeconfig.cache
 C:\Development\MemoryError\MESharp_Examples\MESharpWinForm\obj\Debug\net8.0-windows\ref\MESharpWinForm.dll
+C:\Users\Max Power\source\repos\iStokee\MESharp-Examples\MESharpWinForm\bin\Debug\net8.0-windows\MESharpWinForm.deps.json
+C:\Users\Max Power\source\repos\iStokee\MESharp-Examples\MESharpWinForm\bin\Debug\net8.0-windows\MESharpWinForm.dll
+C:\Users\Max Power\source\repos\iStokee\MESharp-Examples\MESharpWinForm\bin\Debug\net8.0-windows\MESharpWinForm.pdb
+C:\Users\Max Power\source\repos\iStokee\MESharp-Examples\MESharpWinForm\bin\Debug\net8.0-windows\csharp_interop.dll
+C:\Users\Max Power\source\repos\iStokee\MESharp-Examples\MESharpWinForm\bin\Debug\net8.0-windows\csharp_interop.pdb
+C:\Users\Max Power\source\repos\iStokee\MESharp-Examples\MESharpWinForm\bin\Debug\net8.0-windows\csharp_interop.xml
+C:\Users\Max Power\source\repos\iStokee\MESharp-Examples\MESharpWinForm\obj\Debug\net8.0-windows\MESharpWinForm.csproj.AssemblyReference.cache
+C:\Users\Max Power\source\repos\iStokee\MESharp-Examples\MESharpWinForm\obj\Debug\net8.0-windows\MESharpExamples.WinForms.Form1.resources
+C:\Users\Max Power\source\repos\iStokee\MESharp-Examples\MESharpWinForm\obj\Debug\net8.0-windows\MESharpWinForm.csproj.GenerateResource.cache
+C:\Users\Max Power\source\repos\iStokee\MESharp-Examples\MESharpWinForm\obj\Debug\net8.0-windows\MESharpWinForm.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Max Power\source\repos\iStokee\MESharp-Examples\MESharpWinForm\obj\Debug\net8.0-windows\MESharpWinForm.AssemblyInfoInputs.cache
+C:\Users\Max Power\source\repos\iStokee\MESharp-Examples\MESharpWinForm\obj\Debug\net8.0-windows\MESharpWinForm.AssemblyInfo.cs
+C:\Users\Max Power\source\repos\iStokee\MESharp-Examples\MESharpWinForm\obj\Debug\net8.0-windows\MESharpWinForm.csproj.CoreCompileInputs.cache
+C:\Users\Max Power\source\repos\iStokee\MESharp-Examples\MESharpWinForm\obj\Debug\net8.0-windows\MESharpWinForm.sourcelink.json
+C:\Users\Max Power\source\repos\iStokee\MESharp-Examples\MESharpWinForm\obj\Debug\net8.0-windows\MESharpW.BE232B41.Up2Date
+C:\Users\Max Power\source\repos\iStokee\MESharp-Examples\MESharpWinForm\obj\Debug\net8.0-windows\MESharpWinForm.dll
+C:\Users\Max Power\source\repos\iStokee\MESharp-Examples\MESharpWinForm\obj\Debug\net8.0-windows\refint\MESharpWinForm.dll
+C:\Users\Max Power\source\repos\iStokee\MESharp-Examples\MESharpWinForm\obj\Debug\net8.0-windows\MESharpWinForm.pdb
+C:\Users\Max Power\source\repos\iStokee\MESharp-Examples\MESharpWinForm\obj\Debug\net8.0-windows\ref\MESharpWinForm.dll

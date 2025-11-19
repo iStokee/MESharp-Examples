@@ -1,0 +1,84 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Max Power\\source\\repos\\iStokee\\MESharp-Examples\\MESharpPortables\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CF193C44-2F42-43E3-A4E5-32EA562E807D}|MESharpPortables.csproj|c:\\users\\max power\\source\\repos\\istokee\\mesharp-examples\\mesharpportables\\mesharpportables.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{CF193C44-2F42-43E3-A4E5-32EA562E807D}|MESharpPortables.csproj|solutionrelative:mesharpportables.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF193C44-2F42-43E3-A4E5-32EA562E807D}|MESharpPortables.csproj|c:\\users\\max power\\source\\repos\\istokee\\mesharp-examples\\mesharpportables\\mesharpportables.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{CF193C44-2F42-43E3-A4E5-32EA562E807D}|MESharpPortables.csproj|solutionrelative:mesharpportables.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF193C44-2F42-43E3-A4E5-32EA562E807D}|MESharpPortables.csproj|c:\\users\\max power\\source\\repos\\istokee\\mesharp-examples\\mesharpportables\\portablesrunner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF193C44-2F42-43E3-A4E5-32EA562E807D}|MESharpPortables.csproj|solutionrelative:portablesrunner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF193C44-2F42-43E3-A4E5-32EA562E807D}|MESharpPortables.csproj|c:\\users\\max power\\source\\repos\\istokee\\mesharp-examples\\mesharpportables\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{CF193C44-2F42-43E3-A4E5-32EA562E807D}|MESharpPortables.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MESharpPortables",
+              "DocumentMoniker": "C:\\Users\\Max Power\\source\\repos\\iStokee\\MESharp-Examples\\MESharpPortables\\MESharpPortables.csproj",
+              "RelativeDocumentMoniker": "MESharpPortables.csproj",
+              "ToolTip": "C:\\Users\\Max Power\\source\\repos\\iStokee\\MESharp-Examples\\MESharpPortables\\MESharpPortables.csproj",
+              "RelativeToolTip": "MESharpPortables.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-13T02:40:23.371Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MESharpPortables",
+              "DocumentMoniker": "C:\\Users\\Max Power\\source\\repos\\iStokee\\MESharp-Examples\\MESharpPortables\\MESharpPortables.csproj",
+              "RelativeDocumentMoniker": "MESharpPortables.csproj",
+              "ToolTip": "C:\\Users\\Max Power\\source\\repos\\iStokee\\MESharp-Examples\\MESharpPortables\\MESharpPortables.csproj",
+              "RelativeToolTip": "MESharpPortables.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-13T00:34:02.174Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PortablesRunner.cs",
+              "DocumentMoniker": "C:\\Users\\Max Power\\source\\repos\\iStokee\\MESharp-Examples\\MESharpPortables\\PortablesRunner.cs",
+              "RelativeDocumentMoniker": "PortablesRunner.cs",
+              "ToolTip": "C:\\Users\\Max Power\\source\\repos\\iStokee\\MESharp-Examples\\MESharpPortables\\PortablesRunner.cs",
+              "RelativeToolTip": "PortablesRunner.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T23:57:48.057Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Max Power\\source\\repos\\iStokee\\MESharp-Examples\\MESharpPortables\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "MainWindow.xaml",
+              "ToolTip": "C:\\Users\\Max Power\\source\\repos\\iStokee\\MESharp-Examples\\MESharpPortables\\MainWindow.xaml",
+              "RelativeToolTip": "MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-12T23:55:34.34Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
