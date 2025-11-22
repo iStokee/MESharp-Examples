@@ -1,15 +1,25 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net10.0-windows</TargetFramework>
+    <TargetFramework>net8.0-windows7.0</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
     <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>StokeeFishing</RootNamespace>
+    <AssemblyName>StokeeFishing</AssemblyName>
+    <OutputType>Library</OutputType>
+    <PlatformTarget>x64</PlatformTarget>
+    <EnableDefaultApplicationDefinition>false</EnableDefaultApplicationDefinition>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Stateless" Version="5.16.0" />
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="csharp_interop">
-      <HintPath>..\..\ME\x64\Build_DLL\csharp_interop.dll</HintPath>
+      <HintPath>..\..\csharp_interop\bin\Debug\net8.0-windows\csharp_interop.dll</HintPath>
     </Reference>
   </ItemGroup>
 
