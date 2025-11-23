@@ -10,17 +10,36 @@
     <OutputType>Library</OutputType>
     <PlatformTarget>x64</PlatformTarget>
     <EnableDefaultApplicationDefinition>false</EnableDefaultApplicationDefinition>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Stateless" Version="5.16.0" />
-    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
+    <None Remove="FodyWeavers.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0">
+      <PrivateAssets></PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Costura.Fody" Version="6.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Fody" Version="6.9.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Stateless" Version="5.20.0" />
   </ItemGroup>
 
   <ItemGroup>
     <Reference Include="csharp_interop">
-      <HintPath>..\..\csharp_interop\bin\Debug\net8.0-windows\csharp_interop.dll</HintPath>
+      <HintPath>..\..\ME\x64\Build_DLL\csharp_interop.dll</HintPath>
     </Reference>
   </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command=":: ensure the target folder exists&#xD;&#xA;if not exist &quot;%25USERPROFILE%25\MemoryError\CSharp_scripts\&quot; (mkdir &quot;%25USERPROFILE%25\MemoryError\CSharp_scripts\&quot;)&#xD;&#xA;:: copy the full build output so dependencies are present next to the script&#xD;&#xA;xcopy /Y /I /S &quot;$(TargetDir)*&quot; &quot;%25USERPROFILE%25\MemoryError\CSharp_scripts\&quot;" />
+  </Target>
 
 </Project>

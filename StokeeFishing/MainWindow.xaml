@@ -375,8 +375,8 @@
                 </Grid.ColumnDefinitions>
 
                 <StackPanel Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center">
-                    <TextBlock Text="Script by Stokee | " Foreground="{StaticResource TextSecondary}" FontSize="11"/>
-                    <TextBlock Text="MESharp Framework" Foreground="{StaticResource AccentColor}" FontSize="11"/>
+                    <TextBlock Text="Script by iStokee | " Foreground="{StaticResource TextSecondary}" FontSize="11"/>
+                    <TextBlock Text="written for MESharp" Foreground="{StaticResource AccentColor}" FontSize="11"/>
                 </StackPanel>
 
                 <StackPanel Grid.Column="1" Orientation="Horizontal">
