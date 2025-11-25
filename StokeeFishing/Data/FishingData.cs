@@ -83,7 +83,7 @@ public record FishType(
     public static readonly FishType Shark = new("Raw shark", 383, 76, 110, FishingAction.Harpoon, FishingEquipment.Harpoon);
     public static readonly FishType Cavefish = new("Raw cavefish", 15264, 85, 300, FishingAction.Bait, FishingEquipment.FishingRod, FishingBait.FishingBait);
     public static readonly FishType Rocktail = new("Raw rocktail", 15270, 90, 380, FishingAction.Bait, FishingEquipment.FishingRod, FishingBait.LivingMinerals);
-    public static readonly FishType Sailfish = new("Raw sailfish", 42247, 97, 420, FishingAction.Harpoon, FishingEquipment.Harpoon);
+    public static readonly FishType Sailfish = new("Raw sailfish", 42249, 97, 420, FishingAction.Harpoon, FishingEquipment.Harpoon);
 
     // Barbarian fishing (48+)
     public static readonly FishType LeapingTrout = new("Leaping trout", 11328, 48, 50, FishingAction.BarbarianFish, FishingEquipment.BarbarianRod);

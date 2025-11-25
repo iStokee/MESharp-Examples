@@ -1,15 +1,16 @@
 # MESharp Examples
 
-This folder contains self-contained script projects that reference `csharp_interop.dll`. They illustrate how to host `ScriptRuntimeHost`, handle logging, and wire UI frameworks (CLI, WinForms, WPF) into MESharp.
+This folder contains self-contained script projects that reference `csharp_interop.dll`. They illustrate how to use helper classes like `ScriptRuntimeHost`, `WpfScriptHost`, and `WinFormsScriptHost` to simplify script creation with hot-reload support.
 
 ## Projects
 
 | Path | Target | Notes |
 | --- | --- | --- |
-| `MESharpCLI/` | `net8.0` console | Minimal loop that writes to the native logger and shows `ShutdownMonitor` usage. |
-| `MESharpWinForm/` | `net8.0-windows` WinForms | Demonstrates UI message loop + `ApplicationConfiguration` bootstrapping. |
-| `MESharpWPF/` | `net8.0-windows` WPF | Mirrors the pattern Orbit uses for script UIs, including dispatcher shutdown. |
-| `MESharpPortables/` | `net8.0-windows` WPF | Modernized take on the classic Stokee Portables helper with MESharp APIs. |
+| `MESharpCLI/` | `net8.0` console | Minimal loop showing `ScriptRuntimeHost` usage with cancellation token support. |
+| `MESharpWinForm/` | `net8.0-windows` WinForms | Demonstrates WinForms UI with `WinFormsScriptHost` for simplified setup. |
+| `MESharpWPF/` | `net8.0-windows` WPF | Shows WPF UI with `WpfScriptHost` handling Application.Current lifecycle. |
+| `MESharpPortables/` | `net8.0-windows` WPF | Modernized Stokee Portables helper demonstrating the Portables API. |
+| `StokeeFishing/` | `net8.0-windows` WPF | Full-featured fishing script showing real-world script structure. |
 | `MESharpExamples.sln` | Solution for all samples | Load this in Visual Studio to build/debug each project. |
 
 ## Prerequisites
@@ -28,17 +29,60 @@ Each project copies its output to `%USERPROFILE%\MemoryError\MESharpExamples\<Fr
 
 ## Script Entry Pattern
 
-All examples expose the standard entry points expected by MemoryError:
+All examples follow the hot-reload requirements:
 
+**Absolute Minimum (Required):**
 ```csharp
-public static class ScriptEntry
+namespace MESharp
 {
-    public static void Initialize() => ScriptRuntimeHost.Run(RunAsync, HostOptions);
-    public static void Shutdown() => ScriptRuntimeHost.Stop();
-    public static void SetLogger(IntPtr logger) => ScriptRuntimeHost.SetLogger(logger);
+    public static class ScriptEntry
+    {
+        public static void Initialize() { /* startup code */ }
+        public static void Shutdown() { /* cleanup code */ }
+    }
 }
 ```
 
-That lets the native host drive managed lifetimes uniformly while still allowing each sample to plug in its own UI or background loop.
+**Using Helper Classes (Recommended):**
 
-Use these projects as references when creating new scripts—clone one closest to your scenario, rename the assembly, and adjust the run loop/UI.
+These examples use helper classes from `csharp_interop` to simplify setup:
+
+- **ScriptRuntimeHost**: For CLI scripts with async loops and cancellation token support
+- **WpfScriptHost**: For WPF scripts with automatic Application.Current lifecycle management
+- **WinFormsScriptHost**: For WinForms scripts with automatic form lifecycle management
+
+Example patterns:
+
+```csharp
+// CLI script with ScriptRuntimeHost
+public static void Initialize() => ScriptRuntimeHost.Run(RunAsync, options);
+public static void Shutdown() => ScriptRuntimeHost.Stop();
+
+// WPF script with WpfScriptHost
+public static void Initialize() => WpfScriptHost.Run(() => new MainWindow(), options);
+public static void Shutdown() => WpfScriptHost.Stop();
+
+// WinForms script with WinFormsScriptHost
+public static void Initialize() => WinFormsScriptHost.Run(() => new Form1(), options);
+public static void Shutdown() => WinFormsScriptHost.Stop();
+```
+
+**Even Simpler Alternatives:**
+
+For even simpler scripts, see the base classes in `csharp_interop/Scripting/`:
+- **ScriptBase**: CLI script base class with automatic token management
+- **WpfScriptBase**: WPF script base class with automatic Application.Current handling
+
+Or use the minimal templates:
+- `cli_template_minimal.txt` - ~80 lines, uses ScriptBase
+- `wpf_template_minimal.txt` - ~70 lines, uses WpfScriptBase
+
+## Using These Examples
+
+Use these projects as references when creating new scripts:
+1. Clone the example closest to your scenario
+2. Rename the assembly and namespace
+3. Adjust the UI or background loop for your needs
+4. Build and load via ME's "Hot Reload" button
+
+All examples support hot-reload, so you can modify and rebuild without restarting ME!
