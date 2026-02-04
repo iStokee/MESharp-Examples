@@ -57,15 +57,15 @@ Example patterns:
 
 ```csharp
 // CLI script with ScriptRuntimeHost
-public static void Initialize() => ScriptRuntimeHost.Run(RunAsync, options);
+public static void Initialize() => ScriptRuntimeHost.Run(MainAsync, options);
 public static void Shutdown() => ScriptRuntimeHost.Stop();
 
 // WPF script with WpfScriptHost
-public static void Initialize() => WpfScriptHost.Run(() => new MainWindow(), options);
+public static void Initialize() => WpfScriptHost.Run(Main, options);
 public static void Shutdown() => WpfScriptHost.Stop();
 
 // WinForms script with WinFormsScriptHost
-public static void Initialize() => WinFormsScriptHost.Run(() => new Form1(), options);
+public static void Initialize() => WinFormsScriptHost.Run(Main, options);
 public static void Shutdown() => WinFormsScriptHost.Stop();
 ```
 
@@ -75,10 +75,45 @@ For even simpler scripts, see the base classes in `csharp_interop/Scripting/`:
 - **ScriptBase**: CLI script base class with automatic token management
 - **WpfScriptBase**: WPF script base class with automatic Application.Current handling
 
-Or use the minimal templates:
-- `cli_template_minimal.txt` - uses ScriptBase
-- `winform_template_minimal.txt` - uses WinFormsScriptHost
-- `wpf_template_minimal.txt` - uses WpfScriptBase
+Or use the minimal templates in `TextTemplates/`:
+- `TextTemplates/cli_template_minimal.txt` - uses ScriptBase
+- `TextTemplates/winform_template_minimal.txt` - uses WinFormsScriptHost
+- `TextTemplates/wpf_template_minimal.txt` - uses WpfScriptBase
+
+## Using Text Templates
+
+Text templates are for fast script bootstrapping when you do not want to copy an entire sample project.
+
+Template sets:
+- **Minimal** (`*_template_minimal.txt`): smallest possible scaffold.
+- **Example-style** (`*_template.txt`): still small, but includes more patterns/comments.
+
+Recommended workflow:
+1. Create a new **Class Library** project in Visual Studio.
+2. Set target/framework flags for your UI type.
+3. Add a reference to `csharp_interop.dll`.
+4. Paste one template from `TextTemplates/` into `ScriptEntry.cs`.
+5. Keep `namespace MESharp` and `public static class ScriptEntry` exactly as shown.
+6. Build and load via ME Hot Reload.
+
+Minimum `.csproj` shape (adjust per project type):
+
+```xml
+<PropertyGroup>
+  <TargetFramework>net10.0-windows</TargetFramework>
+  <PlatformTarget>x64</PlatformTarget>
+  <OutputType>Library</OutputType>
+</PropertyGroup>
+<ItemGroup>
+  <Reference Include="csharp_interop">
+    <HintPath>..\..\ME\x64\Build_DLL\csharp_interop.dll</HintPath>
+  </Reference>
+</ItemGroup>
+```
+
+Add one of these when applicable:
+- WPF: `<UseWPF>true</UseWPF>`
+- WinForms: `<UseWindowsForms>true</UseWindowsForms>`
 
 ## Using These Examples
 
