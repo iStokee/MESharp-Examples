@@ -1,0 +1,81 @@
+using System;
+using System.Threading;
+using System.Threading.Tasks;
+using MESharp.API;
+using MESharp.Services;
+
+namespace MESharp
+{
+    /// <summary>
+    /// CLI Script Template (example-style) using ScriptRuntimeHost.
+    ///
+    /// This keeps the required boilerplate to a minimum while still showing
+    /// a realistic async loop pattern with cancellation.
+    ///
+    /// REQUIREMENTS FOR HOT-RELOAD:
+    /// - public static class ScriptEntry in MESharp namespace
+    /// - public static void Initialize()
+    /// - public static void Shutdown()
+    ///
+    /// If you want the absolute minimal version, use cli_template_minimal.txt.
+    /// </summary>
+    public static class ScriptEntry
+    {
+        private static readonly ScriptRuntimeHostOptions HostOptions = new()
+        {
+            ScriptName = "MESharp CLI Template"
+        };
+
+        // REQUIRED by ME runtime:
+        // - Type name: MESharp.ScriptEntry
+        // - Method signature: public static void Initialize()
+        public static void Initialize() => ScriptRuntimeHost.Run(MainAsync, HostOptions);
+
+        // REQUIRED by ME runtime for clean unload:
+        // - Method signature: public static void Shutdown()
+        public static void Shutdown() => ScriptRuntimeHost.Stop();
+
+        // Script "main loop": this is the first method your script runs after Initialize().
+        private static async Task MainAsync(CancellationToken token)
+        {
+            Console.WriteLine("[CLI Template] Script started.");
+
+            while (!token.IsCancellationRequested)
+            {
+                try
+                {
+                    if (!Game.IsInjected || !Game.HasClientPointers)
+                    {
+                        Console.WriteLine("[CLI Template] Waiting for injection...");
+                        await Task.Delay(1000, token);
+                        continue;
+                    }
+
+                    if (!LocalPlayer.IsLoggedIn())
+                    {
+                        Console.WriteLine("[CLI Template] Player not logged in.");
+                        await Task.Delay(2000, token);
+                        continue;
+                    }
+
+                    var name = Game.LocalPlayerName;
+                    var (x, y, z) = LocalPlayer.GetTilePosition();
+                    Console.WriteLine($"[CLI Template] {name} @ ({x}, {y}, {z})");
+
+                    await Task.Delay(1000, token);
+                }
+                catch (OperationCanceledException) when (token.IsCancellationRequested)
+                {
+                    break;
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"[CLI Template] Error: {ex.Message}");
+                    await Task.Delay(1000, token);
+                }
+            }
+
+            Console.WriteLine("[CLI Template] Script stopped.");
+        }
+    }
+}

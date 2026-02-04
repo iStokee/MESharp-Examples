@@ -1,0 +1,112 @@
+using System;
+using System.Threading.Tasks;
+using MESharp.Scripting;
+
+namespace MESharp
+{
+	/// <summary>
+	/// Minimal CLI Script Template using ScriptBase.
+	///
+	/// This is the SIMPLEST way to create a script - just inherit from ScriptBase
+	/// and override OnInitialize(). The base class handles all the shutdown and
+	/// cancellation token management for you.
+	///
+	/// REQUIREMENTS FOR HOT-RELOAD:
+	/// 1. Must have a public static class named "MESharp.ScriptEntry"
+	/// 2. Must have Initialize() and Shutdown() methods that call the instance methods
+	/// </summary>
+	public static class ScriptEntry
+	{
+		private static readonly MyScript MainScript = new();
+
+		// REQUIRED by ME runtime:
+		// - Type name: MESharp.ScriptEntry
+		// - Method signature: public static void Initialize()
+		public static void Initialize() => MainScript.Initialize();
+
+		// REQUIRED by ME runtime for clean unload:
+		// - Method signature: public static void Shutdown()
+		public static void Shutdown() => MainScript.Shutdown();
+	}
+
+	/// <summary>
+	/// Your actual script implementation.
+	/// Inherits from ScriptBase to get automatic cancellation token management.
+	/// </summary>
+	internal class MyScript : ScriptBase
+	{
+		/// <summary>
+		/// Called when the script is loaded or hot-reloaded.
+		/// Start your background tasks here.
+		/// </summary>
+		protected override void OnInitialize()
+		{
+			Console.WriteLine("[MyScript] Starting...");
+
+			// Start your main loop in a background task
+			// The CancellationToken property is provided by ScriptBase
+			Task.Run(() => MainLoop(), CancellationToken);
+		}
+
+		/// <summary>
+		/// Optional: Called when the script is unloaded.
+		/// Override this if you need custom cleanup.
+		/// </summary>
+		protected override void OnShutdown()
+		{
+			Console.WriteLine("[MyScript] Cleaning up...");
+			// Your cleanup code here (close files, dispose resources, etc.)
+		}
+
+		/// <summary>
+		/// Main script logic.
+		/// Always check CancellationToken.IsCancellationRequested to allow graceful shutdown.
+		/// </summary>
+		private async Task MainLoop()
+		{
+			int iteration = 0;
+
+			// The CancellationToken is provided by ScriptBase
+			while (!CancellationToken.IsCancellationRequested)
+			{
+				iteration++;
+				Console.WriteLine($"[MyScript] Iteration {iteration}");
+
+				// ============================================================
+				// YOUR SCRIPT LOGIC GOES HERE
+				// ============================================================
+				// Available APIs (from MESharp.API namespace):
+				// - LocalPlayer: Get player position, health, prayer, etc.
+				// - Inventory: Check/use items in inventory
+				// - Bank: Open/close bank, deposit/withdraw items
+				// - NPC: Find and interact with NPCs
+				// - Objects: Find and interact with game objects
+				// - Skills: Get skill levels and experience
+				// - Chat: Send messages, read chat
+				// - Equipment: Check/manage equipped items
+				//
+				// Example usage:
+				// if (LocalPlayer.GetHealth() < 500)
+				// {
+				//     Console.WriteLine("Health is low! Eating food...");
+				//     Inventory.UseItem(itemId: 385); // Shark
+				// }
+				// ============================================================
+
+				// Always pass CancellationToken to async operations
+				// This allows immediate shutdown when hot-reloading
+				try
+				{
+					await Task.Delay(1000, CancellationToken);
+				}
+				catch (OperationCanceledException)
+				{
+					// Expected when shutdown is requested
+					break;
+				}
+			}
+
+			Console.WriteLine("[MyScript] Main loop exited gracefully.");
+		}
+	}
+}

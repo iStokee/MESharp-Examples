@@ -13,6 +13,12 @@ namespace MESharpExamples.WinForms
         public Form1()
         {
             InitializeComponent();
+
+            if (IsDesignMode())
+            {
+                return;
+            }
+
             _statusTimer.Tick += (_, _) => RefreshStatus();
             _statusTimer.Start();
             RefreshStatus();
@@ -106,6 +112,12 @@ namespace MESharpExamples.WinForms
             _statusTimer.Stop();
             _statusTimer.Dispose();
             base.OnFormClosing(e);
+        }
+
+        private static bool IsDesignMode()
+        {
+            return System.ComponentModel.LicenseManager.UsageMode
+                == System.ComponentModel.LicenseUsageMode.Designtime;
         }
     }
 }

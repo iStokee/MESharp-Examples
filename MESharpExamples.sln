@@ -9,10 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MESharpWinForm", "MESharpWi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MESharpWPF", "MESharpWPF\MESharpWPF.csproj", "{17A8AFC4-ECBB-4DB6-AB7F-8269BD11FCE1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MESharpPortables", "MESharpPortables\MESharpPortables.csproj", "{CF193C44-2F42-43E3-A4E5-32EA562E807D}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StokeeFishing", "StokeeFishing\StokeeFishing.csproj", "{DC68F281-B55B-4ADE-AD54-999A935272B4}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,14 +27,6 @@ Global
 		{17A8AFC4-ECBB-4DB6-AB7F-8269BD11FCE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17A8AFC4-ECBB-4DB6-AB7F-8269BD11FCE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{17A8AFC4-ECBB-4DB6-AB7F-8269BD11FCE1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CF193C44-2F42-43E3-A4E5-32EA562E807D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CF193C44-2F42-43E3-A4E5-32EA562E807D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CF193C44-2F42-43E3-A4E5-32EA562E807D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CF193C44-2F42-43E3-A4E5-32EA562E807D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DC68F281-B55B-4ADE-AD54-999A935272B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DC68F281-B55B-4ADE-AD54-999A935272B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DC68F281-B55B-4ADE-AD54-999A935272B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DC68F281-B55B-4ADE-AD54-999A935272B4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

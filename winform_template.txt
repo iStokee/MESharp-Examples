@@ -1,0 +1,94 @@
+using System;
+using System.Drawing;
+using System.Windows.Forms;
+using MESharp.Services;
+
+namespace MESharp
+{
+    /// <summary>
+    /// WinForms Script Template (example-style) using WinFormsScriptHost.
+    ///
+    /// This keeps WinForms hot-reload boilerplate out of your script.
+    ///
+    /// REQUIREMENTS FOR HOT-RELOAD:
+    /// - public static class ScriptEntry in MESharp namespace
+    /// - public static void Initialize()
+    /// - public static void Shutdown()
+    ///
+    /// If you want the absolute minimal version, use winform_template_minimal.txt.
+    /// NOTE: Ensure your .csproj includes <UseWindowsForms>true</UseWindowsForms>.
+    /// </summary>
+    public static class ScriptEntry
+    {
+        private static readonly UiScriptHostOptions UiOptions = new()
+        {
+            ScriptName = "MESharp WinForms Template"
+        };
+
+        // REQUIRED by ME runtime:
+        // - Type name: MESharp.ScriptEntry
+        // - Method signature: public static void Initialize()
+        public static void Initialize() => WinFormsScriptHost.Run(Main, UiOptions);
+
+        // REQUIRED by ME runtime for clean unload:
+        // - Method signature: public static void Shutdown()
+        public static void Shutdown() => WinFormsScriptHost.Stop();
+
+        // Script "main" for WinForms: return the root form the host should run.
+        private static MainForm Main() => new();
+    }
+
+    internal sealed class MainForm : Form
+    {
+        private readonly Label _statusLabel;
+        private readonly Timer _timer;
+        private int _ticks;
+
+        public MainForm()
+        {
+            Text = "MESharp WinForms Template";
+            Width = 600;
+            Height = 400;
+            StartPosition = FormStartPosition.CenterScreen;
+
+            var header = new Label
+            {
+                Text = "Hello from MESharp WinForms!",
+                Font = new Font(FontFamily.GenericSansSerif, 14, FontStyle.Bold),
+                AutoSize = true,
+                Left = 20,
+                Top = 20
+            };
+
+            _statusLabel = new Label
+            {
+                Text = "Status: Ready",
+                AutoSize = true,
+                Left = 20,
+                Top = 60
+            };
+
+            var pingButton = new Button
+            {
+                Text = "Ping",
+                Width = 120,
+                Height = 30,
+                Left = 20,
+                Top = 100
+            };
+            pingButton.Click += (_, __) => _statusLabel.Text = $"Status: Pinged at {DateTime.Now:T}";
+
+            Controls.Add(header);
+            Controls.Add(_statusLabel);
+            Controls.Add(pingButton);
+
+            _timer = new Timer { Interval = 1000 };
+            _timer.Tick += (_, __) =>
+            {
+                _ticks++;
+                _statusLabel.Text = $"Status: Running ({_ticks}s)";
+            };
+            _timer.Start();
+        }
+    }
+}

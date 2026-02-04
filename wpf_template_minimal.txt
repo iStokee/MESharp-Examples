@@ -1,0 +1,83 @@
+using System;
+using System.Windows;
+using MESharp.Scripting;
+
+namespace MESharp
+{
+	/// <summary>
+	/// Minimal WPF Script Template using WpfScriptBase.
+	///
+	/// This is the SIMPLEST way to create a WPF script - just inherit from WpfScriptBase
+	/// and override CreateMainWindow(). The base class handles all the WPF threading,
+	/// Application.Current management, and shutdown for you.
+	///
+	/// REQUIREMENTS FOR HOT-RELOAD:
+	/// 1. Must have a public static class named "MESharp.ScriptEntry"
+	/// 2. Must have Initialize() and Shutdown() methods that call the instance methods
+	/// </summary>
+	public static class ScriptEntry
+	{
+		private static readonly MyWpfScript MainScript = new();
+
+		// REQUIRED by ME runtime:
+		// - Type name: MESharp.ScriptEntry
+		// - Method signature: public static void Initialize()
+		public static void Initialize() => MainScript.Initialize();
+
+		// REQUIRED by ME runtime for clean unload:
+		// - Method signature: public static void Shutdown()
+		public static void Shutdown() => MainScript.Shutdown();
+	}
+
+	/// <summary>
+	/// Your actual script implementation.
+	/// Inherits from WpfScriptBase to get automatic WPF lifecycle management.
+	/// </summary>
+	internal class MyWpfScript : WpfScriptBase
+	{
+		/// <summary>
+		/// Called when the script is loaded or hot-reloaded.
+		/// Create and return your main window here.
+		/// </summary>
+		protected override Window CreateMainWindow()
+		{
+			// ============================================================
+			// CREATE YOUR WINDOW HERE
+			// ============================================================
+			// Option 1: Return a custom window class
+			// return new MainWindow();
+			//
+			// Option 2: Create a simple window inline
+			var window = new Window
+			{
+				Title = "My MESharp Script",
+				Width = 800,
+				Height = 600
+			};
+
+			// YOUR WPF UI SETUP HERE
+			// Example: Add controls, set up data bindings, etc.
+			//
+			// Example with MVVM:
+			// window.DataContext = new MainWindowViewModel();
+			//
+			// Example with simple controls:
+			// var button = new Button { Content = "Click Me!" };
+			// button.Click += (s, e) => MessageBox.Show("Button clicked!");
+			// window.Content = button;
+			// ============================================================
+
+			return window;
+		}
+
+		/// <summary>
+		/// Optional: Called when the script is unloaded.
+		/// Override this if you need custom cleanup before the window closes.
+		/// </summary>
+		protected override void OnShutdown()
+		{
+			Console.WriteLine("[MyWpfScript] Cleaning up...");
+			// Your cleanup code here (save settings, close connections, etc.)
+		}
+	}
+}

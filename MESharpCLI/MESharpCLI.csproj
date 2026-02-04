@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net8.0-windows</TargetFramework>
+    <TargetFramework>net10.0-windows</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
@@ -12,13 +12,14 @@
   <Target Name="CopyScriptToExamplesFolder" AfterTargets="Build">
     <PropertyGroup>
       <ExamplesPath>$(USERPROFILE)\MemoryError\MESharpExamples\CLI\</ExamplesPath>
+      <ScriptsPath>$(USERPROFILE)\MemoryError\CSharp_scripts\</ScriptsPath>
     </PropertyGroup>
     <MakeDir Directories="$(ExamplesPath)" Condition="!Exists('$(ExamplesPath)')" />
+    <MakeDir Directories="$(ScriptsPath)" Condition="!Exists('$(ScriptsPath)')" />
     <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(ExamplesPath)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(ScriptsPath)" SkipUnchangedFiles="true" />
     <Message Importance="High" Text="[MESharpExamples.CLI] Copied $(TargetFileName) to $(ExamplesPath)" />
-  </Target>
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command=":: ensure the target folder exists       &#xD;&#xA;if not exist &quot;%25USERPROFILE%25\MemoryError\CSharp_scripts\&quot; (mkdir &quot;%25USERPROFILE%25\MemoryError\CSharp_scripts\&quot;)&#xD;&#xA;:: copy the freshly built DLL&#xD;&#xA;xcopy /Y /I &quot;$(TargetPath)&quot; &quot;%25USERPROFILE%25\MemoryError\CSharp_scripts\&quot;     " />
+    <Message Importance="High" Text="[MESharpExamples.CLI] Copied $(TargetFileName) to $(ScriptsPath)" />
   </Target>
   <ItemGroup>
     <Reference Include="csharp_interop">

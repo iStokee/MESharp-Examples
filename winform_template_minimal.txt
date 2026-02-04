@@ -1,0 +1,53 @@
+using System.Windows.Forms;
+using MESharp.Services;
+
+namespace MESharp
+{
+    /// <summary>
+    /// Minimal WinForms Script Template using WinFormsScriptHost.
+    ///
+    /// This is the SIMPLEST way to create a WinForms script.
+    /// WinFormsScriptHost handles the STA thread and shutdown wiring.
+    ///
+    /// NOTE: Ensure your .csproj includes <UseWindowsForms>true</UseWindowsForms>.
+    /// </summary>
+    public static class ScriptEntry
+    {
+        private static readonly UiScriptHostOptions UiOptions = new()
+        {
+            ScriptName = "MESharp WinForms Minimal"
+        };
+
+        // REQUIRED by ME runtime:
+        // - Type name: MESharp.ScriptEntry
+        // - Method signature: public static void Initialize()
+        public static void Initialize() => WinFormsScriptHost.Run(Main, UiOptions);
+
+        // REQUIRED by ME runtime for clean unload:
+        // - Method signature: public static void Shutdown()
+        public static void Shutdown() => WinFormsScriptHost.Stop();
+
+        // Script "main" for WinForms: return the root form the host should run.
+        private static MainForm Main() => new();
+    }
+
+    internal sealed class MainForm : Form
+    {
+        public MainForm()
+        {
+            Text = "MESharp WinForms Script";
+            Width = 600;
+            Height = 400;
+
+            var label = new Label
+            {
+                Text = "Hello from MESharp WinForms!",
+                AutoSize = true,
+                Top = 20,
+                Left = 20
+            };
+
+            Controls.Add(label);
+        }
+    }
+}

@@ -27,16 +27,16 @@ namespace MESharp
             ScriptName = "MESharp WPF Example"
         };
 
-        /// <summary>
-        /// Initialize entry point - called by ME's hot-reload system via reflection.
-        /// WpfScriptHost will create the window on an STA thread automatically.
-        /// </summary>
-        public static void Initialize() => WpfScriptHost.Run(() => new MainWindow(), UiOptions);
+        // REQUIRED by ME runtime:
+        // - Type name: MESharp.ScriptEntry
+        // - Method signature: public static void Initialize()
+        public static void Initialize() => WpfScriptHost.Run(Main, UiOptions);
 
-        /// <summary>
-        /// Shutdown entry point - called by ME's hot-reload system via reflection.
-        /// WpfScriptHost will close the window and clean up the dispatcher.
-        /// </summary>
+        // REQUIRED by ME runtime for clean unload:
+        // - Method signature: public static void Shutdown()
         public static void Shutdown() => WpfScriptHost.Stop();
+
+        // Script "main" for WPF: return the root window the host should run.
+        private static MainWindow Main() => new();
     }
 }

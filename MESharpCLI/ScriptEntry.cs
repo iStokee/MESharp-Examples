@@ -170,7 +170,7 @@ namespace MESharp
                 // Toggle controls
                 .AddToggle("xpEnabled", "Enable XP tracking", true, "If disabled, XP tab stops updating (still visible).")
 
-                // Slider control (NEW!)
+                // Slider control 
                 .AddSlider("updateDelay", "Update delay (seconds)", 1, 30, 5, "How often the script checks game state.")
 
                 // Text input
@@ -179,7 +179,7 @@ namespace MESharp
                 // ComboBox dropdown
                 .AddChoice("mode", "Script mode", new[] { "Safe", "Normal", "Aggressive" }, "Normal", "Behavior profile for the script.")
 
-                // Visual separator (NEW!)
+                // Visual separator 
                 .AddSeparator()
 
                 // Section header for advanced settings
@@ -195,7 +195,7 @@ namespace MESharp
                 // Visual separator
                 .AddSeparator()
 
-                // Action buttons (NEW!)
+                // Action buttons 
                 .AddHeader("Actions", "Quick actions for testing")
                 .AddButton("Test Success Log", () =>
                 {

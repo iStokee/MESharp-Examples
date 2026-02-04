@@ -27,16 +27,16 @@ namespace MESharp
             ScriptName = "MESharp WinForms Example"
         };
 
-        /// <summary>
-        /// Initialize entry point - called by ME's hot-reload system via reflection.
-        /// WinFormsScriptHost will create the form on an STA thread automatically.
-        /// </summary>
-        public static void Initialize() => WinFormsScriptHost.Run(() => new Form1(), UiOptions);
+        // REQUIRED by ME runtime:
+        // - Type name: MESharp.ScriptEntry
+        // - Method signature: public static void Initialize()
+        public static void Initialize() => WinFormsScriptHost.Run(Main, UiOptions);
 
-        /// <summary>
-        /// Shutdown entry point - called by ME's hot-reload system via reflection.
-        /// WinFormsScriptHost will close the form and clean up the thread.
-        /// </summary>
+        // REQUIRED by ME runtime for clean unload:
+        // - Method signature: public static void Shutdown()
         public static void Shutdown() => WinFormsScriptHost.Stop();
+
+        // Script "main" for WinForms: return the root form the host should run.
+        private static Form1 Main() => new();
     }
 }

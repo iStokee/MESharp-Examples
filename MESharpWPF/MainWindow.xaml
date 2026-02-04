@@ -40,8 +40,8 @@
                         <Setter Property="Margin" Value="0,0,8,0"/>
                     </Style>
                 </StackPanel.Resources>
-                <Button Content="Refresh Inventory" Width="150" Click="RefreshInventory_Click" />
-                <Button Content="Describe Interaction" Width="170" Click="DescribeInteraction_Click" />
+                <Button Content="Refresh Inventory" Width="150" Command="{Binding RefreshInventoryCommand}" />
+                <Button Content="Describe Interaction" Width="170" Command="{Binding DescribeInteractionCommand}" />
             </StackPanel>
         </StackPanel>
 
@@ -64,12 +64,13 @@
             </GroupBox>
 
             <GroupBox Header="Log" Grid.Row="1">
-                <TextBox Name="LogTextBox"
+                <TextBox
                          Margin="8"
                          AcceptsReturn="True"
                          VerticalScrollBarVisibility="Auto"
                          TextWrapping="Wrap"
-                         IsReadOnly="True" />
+                         IsReadOnly="True"
+                         Text="{Binding LogText}" />
             </GroupBox>
         </Grid>
     </Grid>

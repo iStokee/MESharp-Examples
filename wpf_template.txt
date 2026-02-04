@@ -1,0 +1,63 @@
+using System.Windows;
+using System.Windows.Controls;
+using MESharp.Services;
+
+namespace MESharp
+{
+    /// <summary>
+    /// WPF Script Template (example-style) using WpfScriptHost.
+    ///
+    /// This keeps WPF hot-reload boilerplate out of your script.
+    ///
+    /// REQUIREMENTS FOR HOT-RELOAD:
+    /// - public static class ScriptEntry in MESharp namespace
+    /// - public static void Initialize()
+    /// - public static void Shutdown()
+    ///
+    /// If you want the absolute minimal version, use wpf_template_minimal.txt.
+    /// </summary>
+    public static class ScriptEntry
+    {
+        private static readonly UiScriptHostOptions UiOptions = new()
+        {
+            ScriptName = "MESharp WPF Template"
+        };
+
+        // REQUIRED by ME runtime:
+        // - Type name: MESharp.ScriptEntry
+        // - Method signature: public static void Initialize()
+        public static void Initialize() => WpfScriptHost.Run(Main, UiOptions);
+
+        // REQUIRED by ME runtime for clean unload:
+        // - Method signature: public static void Shutdown()
+        public static void Shutdown() => WpfScriptHost.Stop();
+
+        // Script "main" for WPF: return the root window the host should run.
+        private static Window Main()
+        {
+            var window = new Window
+            {
+                Title = "MESharp WPF Template",
+                Width = 600,
+                Height = 400
+            };
+
+            var layout = new StackPanel { Margin = new Thickness(16) };
+            layout.Children.Add(new TextBlock
+            {
+                Text = "Hello from MESharp WPF!",
+                FontSize = 20,
+                Margin = new Thickness(0, 0, 0, 12)
+            });
+            layout.Children.Add(new Button
+            {
+                Content = "Ping",
+                Width = 120,
+                Height = 30
+            });
+
+            window.Content = layout;
+            return window;
+        }
+    }
+}
