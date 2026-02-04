@@ -89,17 +89,3 @@ Use these projects as references when creating new scripts:
 4. Build and load via ME's "Hot Reload" button
 
 All examples support hot-reload, so you can modify and rebuild without restarting ME!
-
-## Suggested 3-layer structure
-
-To keep onboarding simple while preserving advanced examples, treat assets in three layers:
-
-1. **Blank template projects (copy/paste base)**  
-   One project per type (CLI, WinForms, WPF) with only scaffold + blank UI/loop.
-2. **Demo projects (this repo)**  
-   Projects that show practical API calls, timers, and basic UI wiring patterns.
-3. **Text templates (`*_template*.txt`)**  
-   Lightweight snippets for quick generation or in-app "new script" wizard flows.
-
-Recommended direction: keep layer 1 + layer 2 as primary, and use layer 3 as source material
-for auto-generation instead of maintaining separate full examples in text forever.
